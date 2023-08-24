@@ -14,5 +14,7 @@ def part1():
     vowels = ['a', 'e', 'i', 'o', 'u']
 
     for line in lines:
-        if vowels in line:
+        if line.count('a') >= 3 and line.count('ab') == 0 and line.count('cd') == 0 and line.count('pq') == 0 and line.count('xy') == 0:
             print(line)
+
+part1()

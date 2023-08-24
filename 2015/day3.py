@@ -54,13 +54,13 @@ def part2():
     # print(len(data))
     # print(len(santa_coordinates))
     # print(len(robot_coordinates))
+    joined = santa_coordinates + robot_coordinates
+    for coordinate in joined:
+        santa_and_robot_coordinates_no_duplicates[joined.index(coordinate)] = coordinate
 
-    for coordinate in santa_coordinates:
-        santa_and_robot_coordinates_no_duplicates[santa_coordinates.index(coordinate)] = coordinate
-
-    for coordinate in robot_coordinates:
-        santa_and_robot_coordinates_no_duplicates[robot_coordinates.index(coordinate)] = coordinate
-
+    # for coordinate in robot_coordinates:
+    #     santa_and_robot_coordinates_no_duplicates[robot_coordinates.index(coordinate)] = coordinate
+    #
     print('houses with robot', len(santa_and_robot_coordinates_no_duplicates))
 
 # for coordinate in santa_coordinates:
