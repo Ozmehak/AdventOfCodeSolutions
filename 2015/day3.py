@@ -6,6 +6,7 @@ with open('day3_data.txt', 'r') as file:
           data = file.read()
           
           
+def part2():
 
 santa_x = 0
 santa_y = 0
@@ -50,9 +51,6 @@ for i in range(1, len(data), 2):
             robot_y += 1
             robot_coordinates.append([robot_x, robot_y])
 
-
-
-
 santa_coordinates_no_duplicates = {} 
 santa_and_robot_coordinates_no_duplicates = {}
 print(data)
@@ -66,10 +64,8 @@ for coordinate in santa_coordinates:
 for coordinate in robot_coordinates:
     santa_and_robot_coordinates_no_duplicates[robot_coordinates.index(coordinate)] = coordinate
 
-
 print('houses with robot', len(santa_and_robot_coordinates_no_duplicates))
 # print(santa_and_robot_coordinates_no_duplicates)
-
 
 # for coordinate in santa_coordinates:
 #     santa_coordinates_no_duplicates[santa_coordinates.index(coordinate)] = coordinate
@@ -77,3 +73,4 @@ print('houses with robot', len(santa_and_robot_coordinates_no_duplicates))
 # print(len(santa_coordinates_no_duplicates))
 # print(len(santa_coordinates))
 #
+part2()
